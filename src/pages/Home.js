@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import './Home.css';
 
 function Home() {
@@ -7,7 +8,11 @@ function Home() {
       <div className="container">
         <h1 className="display-4">Welcome to TechMate</h1>
         <p className="lead">Your partner in web development, UI/UX, landing pages, and social media management.</p>
-        <a href="#contact" className="btn btn-light btn-lg">Get In Touch</a>
+        <a href="#contact" className="btn btn-light btn-lg">
+        <Link className="nav-link" to="contact" smooth={true} duration={1000}>
+        Get In Touch
+              </Link>
+          </a>
       </div>
     </section>
   );
