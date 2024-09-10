@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar ul li a:hover {
+  color: #007bff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo {
+  height: 80px; /* Adjust the height of the logo */
+  width: auto;  /* This will scale the logo proportionally */
+  margin-right: 10px; /* Add spacing between logo and brand name */
+  display: inline-block;
+  vertical-align: middle; /* Aligns logo with the brand text */
+}
+
+.tech-text {
+  color: #38b6ff; /* Blue color for "Tech" */
+  font-weight: bold;
+}
+
+.mate-text {
+  color: #ffffff; /* White color for "Mate" */
+  font-weight: bold;
+}
+
