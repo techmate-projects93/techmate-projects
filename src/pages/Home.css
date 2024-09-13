@@ -32,7 +32,9 @@
 }
 
 .highlight {
-  color: #38b6ff; /* Part of TechMate in blue */
+  /* color: #38b6ff;  */
+  /* Part of TechMate in blue */
+  color: #3e3b3b;
 }
 
 .btn {
