@@ -1,47 +1,55 @@
+/* Reduce the padding to make the navbar smaller */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;  /* Reduced padding */
   color: #fff;
+  position: fixed;      /* Keep the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Adjust the ul to reduce gap and make navbar smaller */
 .navbar ul {
   list-style-type: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;  /* Reduced gap */
 }
 
+/* Set the cursor to pointer for links */
 .navbar ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 0.9rem;  /* Adjust font size for smaller navbar */
+  cursor: pointer;    /* Set cursor to pointer */
 }
 
 .navbar ul li a:hover {
   color: #007bff;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
+/* Adjust logo size and margin */
 .navbar-logo {
-  height: 80px; /* Adjust the height of the logo */
-  width: auto;  /* This will scale the logo proportionally */
-  margin-right: 10px; /* Add spacing between logo and brand name */
+  height: 60px;  /* Reduced logo size */
+  width: auto;
+  margin-right: 10px;
   display: inline-block;
-  vertical-align: middle; /* Aligns logo with the brand text */
+  vertical-align: middle;
 }
 
+/* Styling for the TechMate text */
 .tech-text {
-  color: #38b6ff; /* Blue color for "Tech" */
+  color: #38b6ff;
   font-weight: bold;
+  font-size: 1.2rem;  /* Reduced font size */
 }
 
 .mate-text {
-  color: #ffffff; /* White color for "Mate" */
+  color: #ffffff;
   font-weight: bold;
+  font-size: 1.2rem;  /* Reduced font size */
 }
-
