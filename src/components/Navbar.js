@@ -8,10 +8,10 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         {/* Logo with a link to the home section */}
-        <a className="navbar-brand" href="#home">
+        <Link className="navbar-brand" to="home" smooth={true} duration={1000}>
           <img src={logo} alt="TechMate Logo" className="navbar-logo" />
           <span className="tech-text">Tech</span><span className="mate-text">Mate</span> {/* TechMate in two colors */}
-        </a>
+        </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
