@@ -24,7 +24,7 @@ nav {
 .navbar ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 0.9rem;  /* Adjust font size for smaller navbar */
+  font-size: 1rem;  /* Adjust font size for smaller navbar */
   cursor: pointer;    /* Set cursor to pointer */
 }
 

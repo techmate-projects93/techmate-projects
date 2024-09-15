@@ -32,11 +32,11 @@ function Navbar() {
                 Services
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="portfolio" smooth={true} duration={1000}>
                 Portfolio
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="contact" smooth={true} duration={1000}>
                 Contact

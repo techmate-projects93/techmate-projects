@@ -1,5 +1,6 @@
 .home-section {
-  background-color: #007bff;
+  /* background-color: #007bff; */
+  background-color: #38b6ff;
   color: white;
   padding: 2rem 2rem;
 }
@@ -38,7 +39,7 @@
 }
 
 .btn {
-  color: #007bff;
+  color: #38b6ff;
   background-color: #fff;
   border: none;
   font-weight: bold;
@@ -46,7 +47,7 @@
 
 .btn:hover {
   background-color: #f8f9fa;
-  color: #007bff;
+  color: #38b6ff;
 }
 
 /* Responsive Design */
