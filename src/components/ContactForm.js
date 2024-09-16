@@ -34,6 +34,7 @@ function ContactForm() {
           netlify-honeypot="bot-field" 
           onSubmit={handleSubmit} 
           className="form-side"
+          netlify
         >
           {/* Hidden input field to prevent bot submissions */}
           <input type="hidden" name="form-name" value="contact" />
