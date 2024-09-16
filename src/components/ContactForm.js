@@ -17,7 +17,6 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     setIsSubmitted(true);  // Set state to indicate form submission
   };
 
