@@ -31,14 +31,10 @@ function ContactForm() {
           name="contact" 
           method="POST" 
           data-netlify="true" 
-          netlify-honeypot="bot-field" 
           onSubmit={handleSubmit} 
           className="form-side"
-          netlify
         >
-          {/* Hidden input field to prevent bot submissions */}
           <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
 
           <div className="form-group">
             <label>Your Name</label>
