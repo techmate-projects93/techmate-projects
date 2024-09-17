@@ -9,6 +9,21 @@
   color: #38b6ff; /* Blue color from your theme for the heading */
   margin-bottom: 2rem;
   font-weight: 700;
+  position: relative; /* For the custom underline */
+  text-align: center; /* Center the heading */
+}
+
+/* Add custom underline */
+#about h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* Adjust this to control distance from the text */
+  transform: translateX(-50%);
+  width: 120px; /* Width of the underline */
+  height: 4px;  /* Thickness of the underline */
+  background-color: #38b6ff; /* Matching theme color */
+  border-radius: 2px; /* Smooth rounded edges */
 }
 
 #about p {
@@ -26,11 +41,11 @@
 
 @media (max-width: 768px) {
   #about h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   #about p {
-      font-size: 1rem;
-      line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }

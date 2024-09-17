@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className="py-5 bg-light">
       <div className="container text-center">
-        <h2>About TechMate</h2>
+        <h2>About Us</h2>
         <p className="lead">
           At TechMate, we pride ourselves on being a full-service digital agency
           that blends innovation with expertise to provide comprehensive

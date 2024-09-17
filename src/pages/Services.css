@@ -9,7 +9,23 @@
     font-weight: bold;
     color: #38b6ff;  /* Blue color matching your theme */
     margin-bottom: 2rem;
-}
+    position: relative; /* For the custom underline */
+    text-align: center; /* Center the heading */
+  }
+  
+  /* Add custom underline */
+  .services-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Adjust this to control distance from the text */
+    transform: translateX(-50%);
+    width: 100px; /* Width of the underline */
+    height: 4px;  /* Thickness of the underline */
+    background-color: #38b6ff; /* Matching theme color */
+    border-radius: 2px; /* Smooth rounded edges */
+  }
+  
 
 /* Service card styles */
 .service-card {
