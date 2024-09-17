@@ -9,15 +9,35 @@ function ContactForm() {
     message: ''
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);  // Track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);  // Track error messages
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);  // Set state to indicate form submission
+    
+    // Prepare the form data to be sent
+    const formResponse = await fetch('https://formspree.io/f/manwzgwl', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      })
+    });
+
+    if (formResponse.ok) {
+      setIsSubmitted(true);
+      setErrorMessage(null);
+    } else {
+      setErrorMessage('There was an error submitting the form. Please try again later.');
+    }
   };
 
   return (
@@ -26,15 +46,7 @@ function ContactForm() {
         <img src={contactImage} alt="Contact Us" />
       </div>
       {!isSubmitted ? (
-        <form 
-          name="contact" 
-          method="POST" 
-          data-netlify="true" 
-          onSubmit={handleSubmit} 
-          className="form-side"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
+        <form onSubmit={handleSubmit} className="form-side">
           <div className="form-group">
             <label>Your Name</label>
             <input 
@@ -68,6 +80,7 @@ function ContactForm() {
               required
             ></textarea>
           </div>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <button type="submit" className="btn-submit">Send</button>
         </form>
       ) : (
